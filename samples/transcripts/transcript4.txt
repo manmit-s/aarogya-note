@@ -1,0 +1,21 @@
+Doctor: Kya problem leke aaye ho?
+
+Patient: Doctor, pichhle 10-12 din se ghutno mein dard ho raha hai, especially subah uthaate waqt. Kabhi-kabhi kamar bhi dard karti hai. Bahut thakaan rehti hai.
+
+Doctor: Dard kitna hai? Chalne-phirne mein dikkat hoti hai?
+
+Patient: Haan, seedhiyan chadhte waqt zyada dard hota hai. Subah stiffness rehti hai 15-20 minute.
+
+Doctor: Koi swelling dikhai deti hai joints mein? Bukhar toh nahi aaya beech mein?
+
+Patient: Swelling nahi hai. Bukhar nahi aaya.
+
+Doctor: Age kitni hai aapki? Koi thyroid, vitamin deficiency ka history?
+
+Patient: 42 saal. Thyroid normal hai last year check karwaya tha. Vitamin D ki kami thi 8 mahine pehle.
+
+Doctor: Lagta hai Vitamin D aur calcium ki kami ke saath mild osteoarthritis shuru ho sakta hai. Main aapko Vitamin D3 60,000 IU hafte mein ek, 8 hafte. Calcium + Vitamin D3 daily. Pain ke liye Aceclofenac + Paracetamol short duration. Exercise aur weight control bahut zaroori hai.
+
+Patient: Injection ya physiotherapy chahiye kya?
+
+Doctor: Abhi nahi. Pehle 1 month yeh treatment try karte hain. Phir dekhte hain. Regular walk aur quadriceps strengthening exercises karna.
