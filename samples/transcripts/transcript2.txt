@@ -1,0 +1,21 @@
+Doctor: Kya takleef hai aapko?
+
+Patient: Doctor saab, 4-5 din se pet mein jalan ho rahi hai. Khana khane ke baad bahut gas ban jati hai, aur kabhi-kabhi chest tak jalan uthati hai.
+
+Doctor: Kab zyada hota hai? Subah khali pet ya khane ke baad?
+
+Patient: Zyada tar khane ke baad. Spicy aur oily khana khane ke baad toh bahut zyada.
+
+Doctor: Ulti ya dast toh nahi ho raha? Weight toh nahi kam hua?
+
+Patient: Nahi, weight same hai. Kabhi-kabhi burps bahut aate hain.
+
+Doctor: Koi stress chal raha hai recently? Sleep normal hai?
+
+Patient: Haan thoda office ka stress hai. Neend bhi late hoti hai.
+
+Doctor: Samajh gaya. Yeh acidity aur gastritis ke symptoms hain. Main aapko Pantoprazole 40 mg subah khali pet dete hoon, 14 din. Saath mein Domperidone agar gas bahut bane toh. Spicy, oily, tea-coffee kam karna. Late night khana bilkul nahi.
+
+Patient: Kitne din mein theek hoga?
+
+Doctor: Agar lifestyle follow kiya toh 5-7 din mein kaafi farak padega. 14 din ke course ke baad batana kaise feel kar rahe ho.
