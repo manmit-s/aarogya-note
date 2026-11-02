@@ -1,0 +1,25 @@
+Doctor: Namaste, bataiye kya problem hai?
+
+Patient: Sir, 3 din se bukhar aa raha hai. Body bhi bahut dard kar rahi hai, bilkul energy nahi hai.
+
+Doctor: Temperature kitna gaya hai maximum?
+
+Patient: Kal raat 102 tak gaya tha. Abhi bhi 100 ke around hai.
+
+Doctor: Khaansi, zukam, gale mein dard, ya saans lene mein dikkat hai?
+
+Patient: Thodi si dry cough hai, lekin gale mein dard nahi hai. Saans normal hai.
+
+Doctor: Koi pet ki problem, ulti, dast toh nahi?
+
+Patient: Nahi sir, bas kamzori aur body pain hai.
+
+Doctor: Pehle se koi bimari hai? Diabetes, BP, asthma?
+
+Patient: Nahi, bilkul normal hoon.
+
+Doctor: Achha. Toh yeh viral fever lag raha hai. Main aapko Paracetamol 650 mg dete hoon, din mein teen baar. Saath mein Cetirizine raat ko ek. Bahut paani piyenge, rest karenge. 3 din mein improve nahi hua toh blood test karwana padega.
+
+Patient: Theek hai sir. Koi antibiotic nahi chahiye?
+
+Doctor: Abhi nahi. Viral mein antibiotic kaam nahi karta. Agar secondary infection hua toh sochenge.
