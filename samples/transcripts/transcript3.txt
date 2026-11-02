@@ -1,0 +1,21 @@
+Doctor: Bataiye, kya problem hai?
+
+Patient: Sir, 2 din se naak band hai, aur gale mein bahut dard hai. Khaansi bhi aa rahi hai thodi.
+
+Doctor: Bukhar hai kya?
+
+Patient: Haan, halka sa 99-100 tak jaata hai shaam ko.
+
+Doctor: Gale mein dard kitna intense hai? Kuch nigalne mein dikkat?
+
+Patient: Haan, pani bhi peene mein dard hota hai. Awaaz bhi thodi change ho gayi hai.
+
+Doctor: Koi allergy history hai? Dust, pollution se problem hoti hai?
+
+Patient: Haan, thodi dust allergy hai pehle se.
+
+Doctor: Throat clear dikh raha hai thoda red. Yeh viral upper respiratory infection lag raha hai. Main aapko Amoxicillin nahi dunga abhi. Sirf symptomatic treatment — Paracetamol, Cetirizine, aur Betadine gargle. Steam lo din mein 2 baar. 3 din mein improve nahi hua toh aana.
+
+Patient: Antibiotic nahi chahiye kya?
+
+Doctor: Abhi nahi. Zyadatar cases viral hote hain. Unnecessary antibiotic se resistance badhega. Agar pus ya high fever aaye toh sochenge.
