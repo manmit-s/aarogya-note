@@ -4,7 +4,7 @@
 > Turn doctor–patient consultation audio into structured clinical notes and draft prescriptions in moments.
 
 ---
-
+[![aarogya-note.png](https://i.postimg.cc/8cwyPXHv/aarogya-note.png)](https://postimg.cc/tnZdB58R)
 ## Overview
 
 **AarogyaNote** is an ambient clinical documentation assistant designed for care teams in India. During outpatient visits, physicians frequently spend 30–40% of consultation time typing notes into electronic records rather than maintaining eye contact and engaging with patients.
