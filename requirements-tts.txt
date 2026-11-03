@@ -1,2 +1,0 @@
-sarvamai>=0.1.29
-python-dotenv>=1.0
