@@ -1,0 +1,28 @@
+{
+  "chief_complaint": "Knee pain, morning stiffness, and fatigue.",
+  "history_of_present_illness": "Knee pain for 10–12 days, worse on first getting up and while climbing stairs, with 15–20 minutes of morning stiffness, occasional lower back pain, and fatigue. No joint swelling or fever. Age 42; thyroid was normal last year and vitamin D deficiency was noted 8 months ago.",
+  "examination_findings": "",
+  "provisional_diagnosis": "Vitamin D and calcium deficiency with possible early mild osteoarthritis.",
+  "medicines": [
+    {
+      "name": "Vitamin D3",
+      "dosage": "60,000 IU",
+      "frequency": "Once weekly",
+      "duration": "8 weeks"
+    },
+    {
+      "name": "Calcium + Vitamin D3",
+      "dosage": "",
+      "frequency": "Daily",
+      "duration": ""
+    },
+    {
+      "name": "Aceclofenac + Paracetamol",
+      "dosage": "",
+      "frequency": "",
+      "duration": "Short duration"
+    }
+  ],
+  "advice": "Exercise, manage weight, take regular walks, and do quadriceps-strengthening exercises.",
+  "follow_up": "Review after trying the treatment for 1 month."
+}
