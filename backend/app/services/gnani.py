@@ -105,8 +105,14 @@ async def _transcribe_batch(content: bytes, filename: str, content_type: str) ->
             job_id = job.get("job_id")
             if not job_id:
                 raise HTTPException(status_code=502, detail="Prisma batch did not return a job ID.")
-            started = await client.post(f"{base}/stt/v3/batch/jobs/{job_id}/start", headers=headers)
-            _check(started, "Prisma batch start")
+            for attempt in range(6):
+                started = await client.post(f"{base}/stt/v3/batch/jobs/{job_id}/start", headers=headers)
+                if started.status_code == 429 or started.status_code in {502, 503, 504}:
+                    if attempt < 5:
+                        await asyncio.sleep(_retry_delay(started, attempt))
+                        continue
+                _check(started, "Prisma batch start")
+                break
             for _ in range(240):
                 await asyncio.sleep(10)
                 status_response = await _batch_read(client, f"{base}/stt/v3/batch/jobs/{job_id}", "Prisma batch status")
