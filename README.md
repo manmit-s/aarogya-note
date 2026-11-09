@@ -395,54 +395,73 @@ Standalone structured extraction endpoint using Groq LPU inference.
 ```
 aarogya-note/
 ├── app/
-│   ├── globals.css              # Tactile Neumorphic design tokens & responsive styling
-│   ├── layout.tsx               # Root layout, typography imports, and brand metadata
-│   ├── page.tsx                 # Main consultation workspace and results dashboard
-│   ├── icon.png                 # Browser favicon and application icon
-│   └── apple-icon.png           # iOS touch icon
+│   ├── globals.css              # Tactile Neumorphic design system & responsive layout tokens
+│   ├── layout.tsx               # Root layout, metadata configuration & Inter typography
+│   ├── page.tsx                 # Main clinical dashboard, upload zone & state orchestrator
+│   ├── icon.png                 # Application favicon
+│   └── apple-icon.png           # iOS home screen touch icon
 ├── components/
-│   ├── AudioUploader.tsx        # Drag-and-drop audio cartridge with validation
-│   ├── ClinicalNote.tsx         # 2-column pairwise clinical documentation layout
-│   ├── ClinicalNotePdf.tsx      # Declarative PDF template for export
-│   ├── PrescriptionCard.tsx     # Formatted prescription card with dosage chips
-│   ├── ProcessingLoader.tsx     # Animated progress state with AarogyaNote emblem
-│   ├── SmoothScroll.tsx         # Lenis smooth scrolling integration
-│   ├── ThemeToggle.tsx          # Light and dark mode surface switcher
-│   └── VoiceSummaryPlayer.tsx   # Audio player with animated waveform display
+│   ├── AudioUploader.tsx        # Drag-and-drop recording cartridge with format validation
+│   ├── ClinicalNote.tsx         # Tactile 2-column SOAP clinical note viewer
+│   ├── ClinicalNotePdf.tsx      # Declarative vector PDF template (@react-pdf/renderer)
+│   ├── PrescriptionCard.tsx     # Formatted prescription card with dose, frequency & duration chips
+│   ├── ProcessingLoader.tsx     # Neumorphic progress loader with AarogyaNote emblem
+│   ├── SmoothScroll.tsx         # Lenis smooth scrolling container
+│   ├── ThemeToggle.tsx          # Dual-shadow light/dark mode surface switcher
+│   └── VoiceSummaryPlayer.tsx   # Audio player with animated soundwave visualizer
 ├── lib/
-│   ├── api.ts                   # Client communication layer for backend endpoints
-│   ├── clinical-pdf.ts          # PDF blob generator and download handler
+│   ├── api.ts                   # Typed HTTP client for FastAPI backend endpoints
+│   ├── clinical-pdf.ts          # Client-side PDF compilation and download trigger
 │   ├── logo-base64.ts           # Embedded vector-compatible asset for PDF headers
-│   └── types.ts                 # TypeScript interfaces for clinical data & responses
+│   └── types.ts                 # TypeScript domain types for clinical data and responses
 ├── backend/
 │   ├── app/
 │   │   ├── services/
-│   │   │   └── gnani.py         # Prisma STT, Timbre TTS, and Groq extraction adapters
-│   │   ├── config.py            # Environment validation and settings
-│   │   ├── main.py              # FastAPI app initialization and CORS middleware
-│   │   ├── prompts.py           # Clinical SOAP schema extraction prompts
-│   │   ├── routes.py            # Audio processing and summary endpoints
-│   │   └── schemas.py           # Pydantic data models
-│   ├── requirements.txt         # Python dependencies
+│   │   │   └── gnani.py         # Prisma STT, Timbre TTS & Groq LLM integration adapters
+│   │   ├── config.py            # Pydantic Settings configuration & .env path resolver
+│   │   ├── main.py              # FastAPI app initialization, CORS & lifespan hooks
+│   │   ├── prompts.py           # Clinical SOAP schema extraction system prompt
+│   │   ├── routes.py            # REST API endpoints (/process, /transcribe, /extract, /summary)
+│   │   └── schemas.py           # Pydantic v2 validation models
+│   ├── requirements.txt         # Python runtime dependencies
 │   └── .env.example             # Backend environment template
+├── samples/
+│   ├── eval/                    # Benchmark scripts, latency stats & evaluation reports
+│   ├── gold/                    # Reference gold-standard clinical notes
+│   ├── hypotheses/              # Raw Prisma STT transcript outputs
+│   ├── transcripts/             # Verified consultation dialogue references
+│   └── tts-generations/         # 4 evaluation audio recordings (.wav)
 ├── assets/
-│   └── AarogyaNote_Logo.png     # Official AarogyaNote brand emblem
-├── public/                      # Static assets and web font fallbacks
+│   └── AarogyaNote_Logo.png     # Official high-resolution brand emblem
 ├── README.md                    # Project documentation
 └── package.json                 # Node dependencies and build scripts
 ```
 
 ---
 
-## Future Improvements
+## Future Roadmap
 
-- **FHIR / HL7 Integration**: Standardize output formats for direct export into hospital electronic medical record (EMR/EHR) systems.
-- **Live Streaming Transcription**: Utilize WebSocket-based streaming speech recognition for real-time note drafting during the consultation.
-- **Deeper Indic Dialect Support**: Extend out-of-the-box vocabulary and acoustics across regional Indian languages including Tamil, Telugu, Kannada, Marathi, and Bengali.
-- **Clinician Inline Editing**: Allow inline editing of individual fields with live audit diff tracking before final sign-off.
+- [ ] **EHR / EMR Integration (FHIR & HL7)**: Direct export to hospital management systems following Ayushman Bharat Digital Mission (ABDM) guidelines.
+- [ ] **Streaming Speech Recognition**: Real-time WebSocket streaming transcription allowing notes to form as the patient speaks.
+- [ ] **Expanded Indic Languages**: Deep acoustic fine-tuning for regional Indian dialects including Tamil, Telugu, Kannada, Bengali, and Marathi.
+- [ ] **Clinician Inline Editing & Audit Log**: In-place note editing with change tracking prior to final digital signature.
 
 ---
 
-## Disclaimer
+## Clinical Safety & Disclaimer
 
-> **Important**: AarogyaNote is an AI-assisted documentation drafting tool created for research and demonstration purposes. All generated clinical notes, provisional diagnoses, and prescriptions are drafts and must be reviewed, verified, and signed off by a licensed medical practitioner before use in patient care.
+> [!CAUTION]
+> **Important Medical Notice**: AarogyaNote is an AI-assisted documentation drafting tool created for research and demonstration purposes. All generated clinical notes, provisional diagnoses, and prescriptions are **draft suggestions** and must be reviewed, verified, and signed off by a licensed medical practitioner before use in clinical care. AarogyaNote does not make autonomous clinical judgments or replace professional medical expertise.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+<div align="center">
+
+**Built with pride for the Gnani AI Internship Submission**  
+*Empowering clinicians, one consultation at a time.*
+
+</div>
