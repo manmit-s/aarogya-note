@@ -1,0 +1,22 @@
+{
+  "transcript1": {
+    "stt_seconds": 1.59,
+    "extraction_seconds": 2.126,
+    "end_to_end_seconds": 3.715
+  },
+  "transcript2": {
+    "stt_seconds": 1.355,
+    "extraction_seconds": 2.972,
+    "end_to_end_seconds": 4.327
+  },
+  "transcript3": {
+    "stt_seconds": 1.335,
+    "extraction_seconds": 3.065,
+    "end_to_end_seconds": 4.4
+  },
+  "transcript4": {
+    "stt_seconds": 8.868,
+    "extraction_seconds": 3.92,
+    "end_to_end_seconds": 12.789
+  }
+}
