@@ -1,6 +1,8 @@
 import asyncio
 import base64
+import io
 import json
+import wave
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from typing import Any
@@ -105,8 +107,14 @@ async def _transcribe_batch(content: bytes, filename: str, content_type: str) ->
             job_id = job.get("job_id")
             if not job_id:
                 raise HTTPException(status_code=502, detail="Prisma batch did not return a job ID.")
-            started = await client.post(f"{base}/stt/v3/batch/jobs/{job_id}/start", headers=headers)
-            _check(started, "Prisma batch start")
+            for attempt in range(6):
+                started = await client.post(f"{base}/stt/v3/batch/jobs/{job_id}/start", headers=headers)
+                if started.status_code == 429 or started.status_code in {502, 503, 504}:
+                    if attempt < 5:
+                        await asyncio.sleep(_retry_delay(started, attempt))
+                        continue
+                _check(started, "Prisma batch start")
+                break
             for _ in range(240):
                 await asyncio.sleep(10)
                 status_response = await _batch_read(client, f"{base}/stt/v3/batch/jobs/{job_id}", "Prisma batch status")
@@ -142,6 +150,32 @@ async def _transcribe_batch(content: bytes, filename: str, content_type: str) ->
     except httpx.HTTPError as exc:
         raise HTTPException(status_code=502, detail="Could not connect to the Prisma batch service.") from exc
 
+def _slice_wav_chunks(content: bytes, chunk_duration_sec: int = 25) -> list[bytes] | None:
+    try:
+        with wave.open(io.BytesIO(content), "rb") as wf:
+            params = wf.getparams()
+            rate = wf.getframerate()
+            total_frames = wf.getnframes()
+            duration = total_frames / float(rate)
+            if duration <= chunk_duration_sec:
+                return None
+            chunk_frames = rate * chunk_duration_sec
+            chunks = []
+            offset = 0
+            while offset < total_frames:
+                wf.setpos(offset)
+                frames = wf.readframes(min(chunk_frames, total_frames - offset))
+                buf = io.BytesIO()
+                with wave.open(buf, "wb") as out_wf:
+                    out_wf.setparams(params)
+                    out_wf.writeframes(frames)
+                chunks.append(buf.getvalue())
+                offset += chunk_frames
+            return chunks
+    except Exception:
+        return None
+
+
 async def transcribe(audio: UploadFile) -> str:
     if audio.content_type and audio.content_type not in ALLOWED_AUDIO_TYPES:
         raise HTTPException(status_code=415, detail="Unsupported audio type. Upload MP3, WAV, M4A, or WebM audio.")
@@ -150,6 +184,35 @@ async def transcribe(audio: UploadFile) -> str:
         raise HTTPException(status_code=400, detail="The uploaded audio file is empty.")
     if len(content) > settings.max_audio_size_mb * 1024 * 1024:
         raise HTTPException(status_code=413, detail=f"Audio must be {settings.max_audio_size_mb} MB or smaller.")
+
+    chunks = _slice_wav_chunks(content, chunk_duration_sec=25)
+    if chunks:
+        transcripts = []
+        try:
+            async with httpx.AsyncClient(timeout=60) as client:
+                for idx, chunk_bytes in enumerate(chunks):
+                    response = await client.post(
+                        _endpoint(settings.prisma_url, "prisma"),
+                        headers=_headers(),
+                        data={"model": settings.prisma_model, "language_code": settings.prisma_language_code},
+                        files={"audio_file": (f"chunk_{idx}.wav", chunk_bytes, "audio/wav")},
+                    )
+                    _check(response, "Prisma")
+                    try:
+                        payload = response.json()
+                    except ValueError:
+                        payload = {"transcription": response.text}
+                    chunk_text = _find_text(payload, ("transcription", "transcript", "text"))
+                    if chunk_text:
+                        transcripts.append(chunk_text)
+            full_transcript = " ".join(transcripts).strip()
+            if full_transcript:
+                return full_transcript
+        except HTTPException:
+            raise
+        except Exception:
+            pass
+
     try:
         async with httpx.AsyncClient(timeout=180) as client:
             response = await client.post(_endpoint(settings.prisma_url, "prisma"), headers=_headers(), data={"model": settings.prisma_model, "language_code": settings.prisma_language_code}, files={"audio_file": (audio.filename or "recording", content, audio.content_type or "application/octet-stream")})

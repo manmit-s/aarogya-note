@@ -1,0 +1,22 @@
+{
+  "chief_complaint": "Post-meal abdominal burning and gas, sometimes rising to the chest.",
+  "history_of_present_illness": "Burning for 4–5 days, worse after meals, especially spicy or oily food, with frequent burping. No vomiting, diarrhea, or weight loss. Reports work stress and late sleep.",
+  "examination_findings": "",
+  "provisional_diagnosis": "Acidity and gastritis symptoms.",
+  "medicines": [
+    {
+      "name": "Pantoprazole",
+      "dosage": "40 mg",
+      "frequency": "Every morning on an empty stomach",
+      "duration": "14 days"
+    },
+    {
+      "name": "Domperidone",
+      "dosage": "",
+      "frequency": "If gas is severe",
+      "duration": ""
+    }
+  ],
+  "advice": "Avoid spicy and oily food, reduce tea and coffee, and avoid late-night meals.",
+  "follow_up": "Report back after the 14-day course; improvement is expected in 5–7 days if lifestyle advice is followed."
+}

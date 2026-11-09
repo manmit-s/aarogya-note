@@ -1,0 +1,22 @@
+{
+  "chief_complaint": "Fever, body aches, and weakness.",
+  "history_of_present_illness": "Fever for 3 days, reaching 102°F last night and around 100°F currently, with mild dry cough and body pain. No sore throat, breathing difficulty, vomiting, diarrhea, or known chronic illness.",
+  "examination_findings": "",
+  "provisional_diagnosis": "Viral fever.",
+  "medicines": [
+    {
+      "name": "Paracetamol",
+      "dosage": "650 mg",
+      "frequency": "Three times daily",
+      "duration": ""
+    },
+    {
+      "name": "Cetirizine",
+      "dosage": "",
+      "frequency": "Once nightly",
+      "duration": ""
+    }
+  ],
+  "advice": "Drink plenty of water and rest. Antibiotics are not indicated at this time.",
+  "follow_up": "If not improved in 3 days, get a blood test; reconsider antibiotics if a secondary infection develops."
+}

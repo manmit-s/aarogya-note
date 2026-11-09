@@ -1,0 +1,22 @@
+{
+  "chief_complaint": "Abdominal burning and excessive gas for 4-5 days after meals, occasional chest burning",
+  "history_of_present_illness": "Patient reports 4-5 days of epigastric burning after meals, especially after spicy and oily foods, with excessive gas and occasional burping. No vomiting, weight unchanged. Occasional chest burning. Reports work‑related stress and delayed sleep but otherwise normal sleep. Symptoms consistent with dyspepsia and gas.",
+  "examination_findings": "",
+  "provisional_diagnosis": "Functional dyspepsia (SD) with gas symptoms",
+  "medicines": [
+    {
+      "name": "Pantoprazole",
+      "dosage": "40 mg",
+      "frequency": "once daily in the morning on empty stomach",
+      "duration": "14 days"
+    },
+    {
+      "name": "Domperidone",
+      "dosage": "",
+      "frequency": "",
+      "duration": ""
+    }
+  ],
+  "advice": "Reduce intake of spicy, oily foods, tea and coffee; avoid late night meals; follow lifestyle modifications for 5-7 days; monitor symptoms.",
+  "follow_up": "Follow up after 14 days of treatment to assess response."
+}

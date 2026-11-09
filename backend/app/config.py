@@ -1,4 +1,8 @@
+from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+BACKEND_DIR = Path(__file__).resolve().parent.parent
+ENV_PATH = BACKEND_DIR / ".env"
 
 class Settings(BaseSettings):
     gnani_api_key: str = ""
@@ -15,6 +19,10 @@ class Settings(BaseSettings):
     timbre_language: str = "auto"
     frontend_origins: str = "http://localhost:3000"
     max_audio_size_mb: int = 30
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+    model_config = SettingsConfigDict(
+        env_file=[str(ENV_PATH), ".env"],
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
 settings = Settings()

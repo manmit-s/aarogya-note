@@ -1,0 +1,22 @@
+{
+  "chief_complaint": "Knee pain for the past 10‑12 days with morning stiffness, occasional low back pain and fatigue",
+  "history_of_present_illness": "Patient reports bilateral knee pain that started 10‑12 days ago, worse on waking and when climbing stairs. Experiences morning stiffness lasting about 15‑20 minutes, occasional low back pain, and generalized fatigue. Walking is difficult. History of vitamin D deficiency 8 months ago, possibly with calcium deficiency.",
+  "examination_findings": "",
+  "provisional_diagnosis": "Probable osteoarthritis of the knees, possibly related to vitamin D deficiency",
+  "medicines": [
+    {
+      "name": "Vitamin D",
+      "dosage": "63,000",
+      "frequency": "",
+      "duration": "8 weeks"
+    },
+    {
+      "name": "Calcium plus Vitamin D",
+      "dosage": "",
+      "frequency": "three times daily",
+      "duration": ""
+    }
+  ],
+  "advice": "Take the prescribed vitamin D and calcium/vitamin D supplements, continue regular walking and perform quadriceps strengthening exercises. Try this regimen for one month before considering injections or physiotherapy.",
+  "follow_up": "Follow up in 1 month to evaluate response to treatment"
+}

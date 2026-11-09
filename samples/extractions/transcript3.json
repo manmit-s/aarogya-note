@@ -1,0 +1,28 @@
+{
+  "chief_complaint": "Nasal congestion, sore throat, cough and mild fever for 2 days",
+  "history_of_present_illness": "Patient reports 2 days of nasal blockage, severe throat pain especially in the evening, cough, mild fever (up to 99‑100°F), difficulty swallowing and drinking water, hoarseness, symptoms aggravated by dust exposure and known dust allergy. Throat pain is intense, with some difficulty in swallowing.",
+  "examination_findings": "Throat appears clear with slight redness.",
+  "provisional_diagnosis": "Probable viral upper respiratory infection.",
+  "medicines": [
+    {
+      "name": "Paracetamol",
+      "dosage": "",
+      "frequency": "twice daily",
+      "duration": ""
+    },
+    {
+      "name": "Cetirizine",
+      "dosage": "",
+      "frequency": "twice daily",
+      "duration": ""
+    },
+    {
+      "name": "Beta steam lo",
+      "dosage": "",
+      "frequency": "twice daily",
+      "duration": ""
+    }
+  ],
+  "advice": "Symptomatic treatment with the above medicines; no antibiotics at this time. If fever becomes high or there is no improvement within 3 days, consider review for possible antibiotics.",
+  "follow_up": "Re‑evaluate in 3 days or sooner if symptoms worsen."
+}

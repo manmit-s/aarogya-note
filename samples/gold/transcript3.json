@@ -1,0 +1,28 @@
+{
+  "chief_complaint": "Nasal congestion, sore throat, and mild cough.",
+  "history_of_present_illness": "Symptoms for 2 days with mild evening fever (99–100°F), painful swallowing including water, and slight voice change. History of dust allergy.",
+  "examination_findings": "Throat appears mildly red.",
+  "provisional_diagnosis": "Viral upper respiratory infection.",
+  "medicines": [
+    {
+      "name": "Paracetamol",
+      "dosage": "",
+      "frequency": "",
+      "duration": ""
+    },
+    {
+      "name": "Cetirizine",
+      "dosage": "",
+      "frequency": "",
+      "duration": ""
+    },
+    {
+      "name": "Betadine gargle",
+      "dosage": "",
+      "frequency": "",
+      "duration": ""
+    }
+  ],
+  "advice": "Use steam twice daily. Antibiotics are not indicated now.",
+  "follow_up": "Return if not improved in 3 days, or if pus or high fever develops."
+}
