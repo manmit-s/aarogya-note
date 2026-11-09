@@ -1,0 +1,22 @@
+{
+  "chief_complaint": "Fever for 3 days with body aches and weakness",
+  "history_of_present_illness": "Patient reports fever for 3 days, temperature peaked at 102°F last night and is now around 100°F. Complains of body pain, fatigue, and a dry cough. No sore throat, no difficulty breathing, no nausea, vomiting, or diarrhea. No known chronic illnesses such as diabetes, hypertension, or asthma.",
+  "examination_findings": "",
+  "provisional_diagnosis": "Probable viral fever",
+  "medicines": [
+    {
+      "name": "Paracetamol",
+      "dosage": "650 mg",
+      "frequency": "3 times a day",
+      "duration": ""
+    },
+    {
+      "name": "Cetirizine",
+      "dosage": "",
+      "frequency": "",
+      "duration": ""
+    }
+  ],
+  "advice": "Drink plenty of water, rest, and monitor symptoms. If fever and other symptoms do not improve within 3 days, get blood tests.",
+  "follow_up": "Re-evaluate in 3 days or sooner if symptoms worsen"
+}
